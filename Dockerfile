@@ -1,5 +1,6 @@
 FROM httpd:alpine
 COPY index.html /usr/local/apache2/htdocs/
+COPY test.txt /usr/local/apache2/htdocs/
 
 # Rahti runs containers as an arbitrary non-root UID, which can't bind to port 80 —
 # move Apache to 8080 instead, and make sure that UID (via group 0) can still write
