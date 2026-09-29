@@ -12,7 +12,7 @@ jobs:
 
       - name:
         run: |
-          echo "Let's start building the backend container image and deploying it to Rahti!" 
+          echo "Let's start building the backend container image and deploying it to Rahti 2!" 
 
       - name: Build container image
         run: docker build -t ville/backend:test .
