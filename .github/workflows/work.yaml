@@ -15,7 +15,7 @@ jobs:
           echo "Let's start building the backend container image and deploying it to Rahti!" 
 
       - name: Build container image
-        run: docker build -t ghcr.io/${{ github.repository }}/backend:${{ github.sha }} ./backend
+        run: docker build -t ville/backend:test .
 
       - name: Log in to registry
         run: echo "${{ secrets.REGISTRY_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
