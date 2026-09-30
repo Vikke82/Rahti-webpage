@@ -39,6 +39,12 @@ jobs:
           echo "Disk Usage:"
           df -h
 
+      - name: Check network connectivity
+        run: |
+          echo "Checking network connectivity..."
+          ping -c 4 google.com || echo "Ping failed"
+          curl -I https://www.google.com || echo "Curl failed"
+
       - name: Install oc CLI
         run: |
           curl -sLo oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz
