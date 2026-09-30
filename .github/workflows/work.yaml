@@ -23,6 +23,12 @@ jobs:
 
       - name: Push image
         run: docker push "$IMAGE"
+      
+      - name: Check folders
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents of the current directory:"
+          ls -la
 
       - name: Install oc CLI
         run: |
