@@ -57,6 +57,4 @@ spec:
     name: webpage
   port:
     targetPort: 8080
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
+  
