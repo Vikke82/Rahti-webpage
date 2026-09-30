@@ -33,6 +33,6 @@ jobs:
       - name: Deploy to Rahti
         run: |
           oc login --token=${{ secrets.RAHTI_TOKEN }} --server=${{ secrets.RAHTI_SERVER }}
-          oc set image deployment/webpage webpage="$IMAGE"
+          oc apply -f webpage-deployment.yaml
 
       
